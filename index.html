@@ -153,6 +153,15 @@
             transform: translateY(-1px);
         }
 
+        .email-address {
+            cursor: default;
+            user-select: all;
+        }
+        .email-address:hover {
+            background-color: #FFFFFF;
+            transform: none;
+        }
+
         /* Active Research Section */
         .section-title {
             font-size: 13px;
@@ -251,14 +260,14 @@
             <a href="YOUR_GOOGLE_DRIVE_SHAREABLE_LINK_HERE" class="btn btn-primary" target="_blank">
                 <i class="fa-solid fa-file-pdf"></i> View Full Poster (PDF)
             </a>
-            <a href="mailto:hjcho@gist.ac.kr" class="btn btn-secondary">
-                <i class="fa-solid fa-envelope"></i> Contact & Email Me
-            </a>
+            <div class="btn btn-secondary email-address">
+                <i class="fa-solid fa-envelope"></i> hjcho@gist.ac.kr
+            </div>
         </div>
 
         <!-- Current Research Highlight -->
         <div class="section-title">
-            <i class="fa-solid fa-compass"></i> Current Keynote
+            <i class="fa-solid fa-compass"></i> Current Research
         </div>
         <div class="research-card">
             <h3 class="research-title">Conditional Contribution of Arctic NPF to the CCN Budget</h3>
@@ -272,16 +281,10 @@
             <i class="fa-solid fa-network-wired"></i> Research Networks
         </div>
         <div class="links-grid">
-            <a href="mailto:hjcho@gist.ac.kr" class="link-item">
-                <i class="fa-solid fa-envelope"></i> GIST Email
+            <a href="https://github.com/hjjo1127" class="link-item" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i> GitHub Profile
             </a>
-            <a href="https://www.researchgate.net/" class="link-item" target="_blank">
-                <i class="fa-brands fa-researchgate"></i> ResearchGate
-            </a>
-            <a href="https://github.com/hjjo1127/card" class="link-item" target="_blank">
-                <i class="fa-brands fa-github"></i> GitHub Code
-            </a>
-            <a href="https://atml.gist.ac.kr" class="link-item" target="_blank">
+            <a href="https://atml.gist.ac.kr" class="link-item" target="_blank" rel="noopener noreferrer">
                 <i class="fa-solid fa-flask"></i> ATML Lab
             </a>
         </div>
