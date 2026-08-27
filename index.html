@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hyungjin Cho | Arctic Climate Researcher</title>
+    <title>Hyungjin Cho | Arctic Aerosol Researcher</title>
     <link rel="icon" href="data:,">
     <!-- Inter Font for Clean Typography -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -190,12 +190,17 @@
             gap: 6px;
         }
 
+        .research-list {
+            display: grid;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
         .research-card {
             background-color: #F8FAFC;
             border-radius: 12px;
             padding: 14px;
             border-left: 4px solid var(--accent);
-            margin-bottom: 24px;
         }
 
         .research-title {
@@ -209,6 +214,18 @@
             font-size: 12px;
             color: var(--text-muted);
             line-height: 1.5;
+        }
+
+        .research-status {
+            display: inline-block;
+            margin-bottom: 7px;
+            padding: 3px 7px;
+            border-radius: 999px;
+            background-color: #E2E8F0;
+            color: var(--secondary);
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.2px;
         }
 
         /* Contact & Social Links Grid */
@@ -260,7 +277,7 @@
         <div class="header">
             <div class="avatar-placeholder">HC</div>
             <h1 class="name">Hyungjin Cho</h1>
-            <p class="title">Ph.D Student</p>
+            <p class="title">Ph.D. Student</p>
             <p class="affiliation">
                 Gwangju Institute of Science and Technology (GIST)<br>
                 Aerosol Technology & Monitoring Lab (ATML)
@@ -291,11 +308,30 @@
         <div class="section-title">
             <i class="fa-solid fa-compass"></i> Current Research
         </div>
-        <div class="research-card">
-            <h3 class="research-title">Conditional Contribution of Arctic NPF to the CCN Budget</h3>
-            <p class="research-desc">
-                Decoding the non-linear competitive survival gauntlet (Growth Rate vs. Condensation Sink) of polar aerosols at Svalbard using explainable AI (TreeSHAP) on our leakage-free NEL ensemble model.
-            </p>
+        <div class="research-list">
+            <article class="research-card">
+                <span class="research-status">2026 IAC · Poster Presentation</span>
+                <h3 class="research-title">Explainable AI-Based Prediction of Arctic CCN Number Concentration</h3>
+                <p class="research-desc">
+                    Developing a model to predict cloud condensation nuclei (CCN) number concentrations and explain the atmospheric processes underlying its predictions.
+                </p>
+            </article>
+
+            <article class="research-card">
+                <span class="research-status">2023 ARAON · Manuscript in Preparation</span>
+                <h3 class="research-title">Terrigenous and Marine Biogenic Drivers of Arctic Ocean New Particle Formation</h3>
+                <p class="research-desc">
+                    Investigating how terrigenous and marine biogenic sources modulate new particle formation during the summer-to-autumn sea-ice transition.
+                </p>
+            </article>
+
+            <article class="research-card">
+                <span class="research-status">2025 ARAON · Ongoing Research</span>
+                <h3 class="research-title">Sub-3 nm Particles and Survival Probability in the Arctic Ocean</h3>
+                <p class="research-desc">
+                    Characterizing sub-3 nm particles and investigating their probability of surviving and growing toward climatically relevant sizes.
+                </p>
+            </article>
         </div>
 
         <!-- Networking Links Grid -->
