@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyungjin Cho | Arctic Climate Researcher</title>
+    <!-- Inter Font for Clean Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Academic & Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>\n        :root {
+            --bg-color: #F8FAFC;
+            --card-bg: #FFFFFF;
+            --primary: #0F1E36; /* Deep Arctic Navy */
+            --secondary: #1F4E79; /* Steel Blue */
+            --accent: #EE6C4D; /* Thermodynamic Coral */
+            --text-main: #1E293B;
+            --text-muted: #64748B;
+            --border: #E2E8F0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px; /* Perfect Mobile Screen Width */
+            background: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(15, 30, 54, 0.05);
+            border: 1px solid var(--border);
+            overflow: hidden;
+            padding: 30px 24px;
+        }
+
+        /* Profile Header */
+        .header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .avatar-placeholder {
+            width: 80px;
+            height: 80px;
+            background: var(--primary);
+            color: #FFFFFF;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0 auto 16px;
+            border: 3px solid var(--border);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .name {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+            margin-bottom: 4px;
+        }
+
+        .title {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--secondary);
+            margin-bottom: 8px;
+        }
+
+        .affiliation {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* Divider Line */
+        .divider {
+            height: 1px;
+            background-color: var(--border);
+            margin: 20px 0;
+            position: relative;
+        }
+        .divider::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: -1px;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent);
+            border-radius: 2px;
+        }
+
+        /* Action Buttons (Downloads) */
+        .action-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: #FFFFFF;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: var(--secondary);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background-color: #FFFFFF;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+        .btn-secondary:hover {
+            background-color: var(--bg-color);
+            transform: translateY(-1px);
+        }
+
+        /* Active Research Section */
+        .section-title {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--secondary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .research-card {
+            background-color: #F8FAFC;
+            border-radius: 12px;
+            padding: 14px;
+            border-left: 4px solid var(--accent);
+            margin-bottom: 24px;
+        }
+
+        .research-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+
+        .research-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* Contact & Social Links Grid */
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .link-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px;
+            background: #FFFFFF;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 12px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        .link-item:hover {
+            border-color: var(--secondary);
+            background-color: var(--bg-color);
+        }
+
+        .link-item i {
+            color: var(--secondary);
+            font-size: 14px;
+            width: 16px;
+            text-align: center;
+        }
+
+        /* Footer Copyright */
+        .footer {
+            text-align: center;
+            font-size: 10px;
+            color: var(--text-muted);
+            margin-top: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Profile Header -->
+        <div class="header">
+            <div class=\"avatar-placeholder\">HC</div>
+            <h1 class="name">Hyungjin Cho</h1>
+            <p class="title">Ph.D Student</p>
+            <p class="affiliation">
+                Gwangju Institute of Science and Technology (GIST)<br>
+                Aerosol Technology & Monitoring Lab (ATML)
+            </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Featured Actions (Poster & Handout Downloads) -->
+        <div class="action-container">
+            <a href="conditional-arctic-ccn-handout-v4.pdf" class="btn btn-primary" target="_blank" download>
+                <i class="fa-solid fa-file-pdf"></i> Download Poster Handout (PDF)
+            </a>
+            <a href="mailto:hjcho@gist.ac.kr" class="btn btn-secondary">
+                <i class="fa-solid fa-envelope"></i> Contact & Email Me
+            </a>
+        </div>
+
+        <!-- Current Research Highlight -->
+        <div class="section-title">
+            <i class="fa-solid fa-compass"></i> Current Keynote
+        </div>
+        <div class="research-card">
+            <h3 class="research-title">Conditional Contribution of Arctic NPF to the CCN Budget</h3>
+            <p class="research-desc">
+                Decoding the non-linear competitive survival gauntlet (Growth Rate vs. Condensation Sink) of polar aerosols at Svalbard using explainable AI (TreeSHAP) on our leakage-free NEL ensemble model.
+            </p>
+        </div>
+
+        <!-- Networking Links Grid -->
+        <div class="section-title">
+            <i class="fa-solid fa-network-wired"></i> Research Networks
+        </div>
+        <div class="links-grid">
+            <a href="mailto:hjcho@gist.ac.kr" class="link-item">
+                <i class="fa-solid fa-envelope"></i> GIST Email
+            </a>
+            <a href="https://www.researchgate.net/" class="link-item" target="_blank">
+                <i class="fa-brands fa-researchgate"></i> ResearchGate
+            </a>
+            <a href="https://github.com/hjjo1127/card" class="link-item" target="_blank">
+                <i class="fa-brands fa-github"></i> GitHub Code
+            </a>
+            <a href="https://atml.gist.ac.kr" class="link-item" target="_blank">
+                <i class="fa-solid fa-flask"></i> ATML Lab
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            © 2026 Hyungjin Cho. All rights reserved.<br>
+        </div>
+    </div>
+
+</body>
+</html>
