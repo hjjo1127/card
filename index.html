@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hyungjin Cho | Arctic Climate Researcher</title>
+    <link rel="icon" href="data:,">
     <!-- Inter Font for Clean Typography -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- FontAwesome for Academic & Social Icons -->
@@ -156,10 +157,24 @@
         .email-address {
             cursor: default;
             user-select: all;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 4px;
+            padding-left: 20px;
         }
         .email-address:hover {
             background-color: #FFFFFF;
             transform: none;
+        }
+        .email-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .email-row i {
+            width: 16px;
+            color: var(--secondary);
+            text-align: center;
         }
 
         /* Active Research Section */
@@ -256,12 +271,19 @@
 
         <!-- Featured Actions (Poster Downloads) -->
         <div class="action-container">
-            <!-- PASTE YOUR GOOGLE DRIVE SHARE LINK BELOW INSTEAD OF THE PLACEHOLDER -->
-            <a href="YOUR_GOOGLE_DRIVE_SHAREABLE_LINK_HERE" class="btn btn-primary" target="_blank">
+            <!-- Public poster link -->
+            <a href="https://drive.google.com/file/d/13kOdhtGsQd4B70IgUa1cR-FJscYADZON/view?usp=drive_link" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
                 <i class="fa-solid fa-file-pdf"></i> View Full Poster (PDF)
             </a>
             <div class="btn btn-secondary email-address">
-                <i class="fa-solid fa-envelope"></i> hjcho@gist.ac.kr
+                <div class="email-row">
+                    <i class="fa-solid fa-building-columns"></i>
+                    <span>hjjo1127@gm.gist.ac.kr</span>
+                </div>
+                <div class="email-row">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>hjjo1127@gmail.com</span>
+                </div>
             </div>
         </div>
 
